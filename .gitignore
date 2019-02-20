@@ -1,0 +1,25 @@
+# IntelliJ Project Files
+.idea
+*.iml
+atlassian-ide-plugin.xml
+
+# Eclipse Project Files
+.project
+.metadata
+.settings/
+.classpath
+.loadpath
+bin/**
+*.launch
+.externalToolsBuilders/
+
+# Maven Files
+target
+
+# Compiled Files
+*.class
+
+#QMetry Files
+test-results
+LICENSE
+LICENSE.txt
