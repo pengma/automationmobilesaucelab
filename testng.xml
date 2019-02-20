@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SauceLabs Test" parallel="methods" thread-count="6">
+
+    <test name="HSBC Logon">
+        <classes>
+            <class name="com.hsbc.mobile.test.WebTestOnSauce"/>
+        </classes>
+    </test>
+
+</suite>
+
