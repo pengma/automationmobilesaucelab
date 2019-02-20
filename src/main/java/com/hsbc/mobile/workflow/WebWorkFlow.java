@@ -4,6 +4,9 @@ import com.hsbc.mobile.pages.HomePage;
 import com.hsbc.mobile.pages.RegistrationPage;
 import org.openqa.selenium.WebDriver;
 
+/**
+ * Created by Mark Ma
+ */
 public class WebWorkFlow {
 
     private WebDriver driver;

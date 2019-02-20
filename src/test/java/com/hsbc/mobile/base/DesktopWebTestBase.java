@@ -4,6 +4,9 @@ import com.hsbc.mobile.TestBase;
 import com.hsbc.mobile.workflow.WebWorkFlow;
 import org.testng.annotations.BeforeMethod;
 
+/**
+ * Created by Mark Ma
+ */
 public class DesktopWebTestBase extends TestBase {
 
     protected WebWorkFlow webWorkFlow;

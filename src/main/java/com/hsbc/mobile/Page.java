@@ -10,6 +10,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/**
+ * Created by Mark Ma
+ */
 public abstract class Page {
 
     private Logger logger = LogManager.getLogger(this.getClass());

@@ -2,6 +2,9 @@ package com.hsbc.mobile.data;
 
 import java.sql.Timestamp;
 
+/**
+ * Created by Mark Ma
+ */
 public interface TestConstants {
 
     String BASE_URL = "https://www.hsbc.com.cn/en-cn/";
@@ -15,6 +18,6 @@ public interface TestConstants {
 //    String PLATFORM = "macOS 10.14";
 //    String PLATFORM = "Android";
 //    String PLATFORM = "iOS";
-    String BROWSER_NAME = "Chrome";
+String BROWSER_NAME = "Chrome";
 //    String BROWSER_NAME = "Safari";
 }

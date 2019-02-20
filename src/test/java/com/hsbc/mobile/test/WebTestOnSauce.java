@@ -6,6 +6,9 @@ import org.testng.annotations.Test;
 import static com.hsbc.mobile.data.TestConstants.BASE_URL;
 import static org.testng.Assert.assertEquals;
 
+/**
+ * Created by Mark Ma
+ */
 public class WebTestOnSauce extends DesktopWebTestBase {
 
     @Test

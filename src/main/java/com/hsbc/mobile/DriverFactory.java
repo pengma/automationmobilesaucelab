@@ -18,6 +18,9 @@ import static com.hsbc.mobile.utils.Utils.isIOSSimulator;
     Please config your environment in EnvVariables class if you wanna debug on Sauce.
  */
 
+/**
+ * Created by Mark Ma
+ */
 class DriverFactory {
 
     private DesiredCapabilities configDesiredCapability(String jobName) {

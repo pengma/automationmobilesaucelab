@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+/**
+ * Created by Mark Ma
+ */
 public class RegistrationPage extends Page {
 
     @FindBy(name = "TermsAndCondition1")

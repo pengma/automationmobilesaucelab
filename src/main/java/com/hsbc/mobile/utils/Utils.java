@@ -2,6 +2,9 @@ package com.hsbc.mobile.utils;
 
 import com.hsbc.mobile.data.TestConstants;
 
+/**
+ * Created by Mark Ma
+ */
 public class Utils {
 
     public static boolean isIOSSimulator() {

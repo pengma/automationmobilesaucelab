@@ -20,6 +20,9 @@ import java.util.concurrent.TimeUnit;
 
 import static com.hsbc.mobile.data.TestConstants.BASE_URL;
 
+/**
+ * Created by Mark Ma
+ */
 @Listeners(SauceOnDemandTestListener.class)
 public class TestBase implements SauceOnDemandSessionIdProvider, SauceOnDemandAuthenticationProvider {
 
