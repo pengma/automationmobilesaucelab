@@ -1,0 +1,1 @@
+This is a sample framework to run the web UI automation test case to SauceLabs.
