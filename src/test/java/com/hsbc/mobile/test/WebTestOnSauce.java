@@ -22,21 +22,6 @@ public class WebTestOnSauce extends DesktopWebTestBase {
         webWorkFlow.userRegister();
     }
 
-    @Test
-    public void testRegisterUser2(){
-        webWorkFlow.userRegister();
-    }
-
-    @Test
-    public void testRegisterUser3(){
-        webWorkFlow.userRegister();
-    }
-
-    @Test
-    public void testRegisterUser4(){
-        webWorkFlow.userRegister();
-    }
-
 //    @DataProvider(name = "testParallel", parallel = true)
 //    public Object[][] parameterName() {
 //        return new Object[][]{

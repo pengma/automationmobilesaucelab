@@ -14,10 +14,10 @@ public interface TestConstants {
     String SAUCE_TEST_URL = "https://" + SAUCE_USERNAME + ":" + SAUCE_ACCESS_KEY + SAUCE_DOMAIN + "/wd/hub";
     String BUILD_TAG = new Timestamp(System.currentTimeMillis()).toString();
 
-    String PLATFORM = "Windows 10";
+    //    String PLATFORM = "Windows 10";
 //    String PLATFORM = "macOS 10.14";
 //    String PLATFORM = "Android";
-//    String PLATFORM = "iOS";
-String BROWSER_NAME = "Chrome";
-//    String BROWSER_NAME = "Safari";
+    String PLATFORM = "iOS";
+    //String BROWSER_NAME = "Chrome";
+    String BROWSER_NAME = "Safari";
 }

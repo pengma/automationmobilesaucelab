@@ -27,10 +27,10 @@ import static com.hsbc.mobile.data.TestConstants.BASE_URL;
 public class TestBase implements SauceOnDemandSessionIdProvider, SauceOnDemandAuthenticationProvider {
 
     protected ThreadLocal<WebDriver> driver = new ThreadLocal<>();
-    private boolean local = false;
     private ThreadLocal<String> sessionId = new ThreadLocal<>();
     private final SauceOnDemandAuthentication authentication =
             new SauceOnDemandAuthentication(TestConstants.SAUCE_USERNAME, TestConstants.SAUCE_ACCESS_KEY);
+    private boolean local = false;
 
     @BeforeMethod(alwaysRun = true)
     public void setupTest(Method method) throws MalformedURLException {
@@ -53,7 +53,6 @@ public class TestBase implements SauceOnDemandSessionIdProvider, SauceOnDemandAu
             String id = ((RemoteWebDriver)driver.get()).getSessionId().toString();
             sessionId.set(id);
         }
-        driver.get().manage().window().maximize();
         driver.get().get(BASE_URL);
         driver.get().manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
