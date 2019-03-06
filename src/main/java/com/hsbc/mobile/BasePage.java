@@ -13,13 +13,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * Created by Mark Ma
  */
-public abstract class Page {
+public abstract class BasePage {
 
     private Logger logger = LogManager.getLogger(this.getClass());
     private final static int DEFAULT_WAIT_TIMEOUT = 20;
     protected WebDriver driver;
 
-    public Page(WebDriver driver) {
+    public BasePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver,this);
     }
@@ -65,11 +65,11 @@ public abstract class Page {
         }
     }
 
-    private Page driverWait(WebElement webElement) {
+    private BasePage driverWait(WebElement webElement) {
         return driverWait(webElement, DEFAULT_WAIT_TIMEOUT);
     }
 
-    private Page driverWait(WebElement webElement, int secs) {
+    private BasePage driverWait(WebElement webElement, int secs) {
         try {
             //This method should check visibility instead of enabled
             new WebDriverWait(driver, secs).until((ExpectedCondition<Object>) driver -> webElement.isDisplayed());

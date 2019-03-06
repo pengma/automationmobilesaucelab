@@ -1,6 +1,6 @@
 package com.hsbc.mobile.pages;
 
-import com.hsbc.mobile.Page;
+import com.hsbc.mobile.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 /**
  * Created by Mark Ma
  */
-public class HomePage extends Page {
+public class HomeBasePage extends BasePage {
 
     @FindBy(css = ".header-dropdown.primary-button")
     private WebElement logonButton;
@@ -16,11 +16,11 @@ public class HomePage extends Page {
     @FindBy(css = ".item-list.login-links > li:nth-child(5)")
     private WebElement registerButton;
 
-    public HomePage(WebDriver driver) {
+    public HomeBasePage(WebDriver driver) {
         super(driver);
     }
 
-    public HomePage clickLogonButton() {
+    public HomeBasePage clickLogonButton() {
         toClick(logonButton);
         try {
             Thread.sleep(500);
@@ -30,8 +30,8 @@ public class HomePage extends Page {
         return this;
     }
 
-    public RegistrationPage clickRegisterLink(){
+    public RegistrationBasePage clickRegisterLink() {
         toClick(registerButton);
-        return new RegistrationPage(driver);
+        return new RegistrationBasePage(driver);
     }
 }

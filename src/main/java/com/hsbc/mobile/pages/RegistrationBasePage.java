@@ -1,6 +1,6 @@
 package com.hsbc.mobile.pages;
 
-import com.hsbc.mobile.Page;
+import com.hsbc.mobile.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 /**
  * Created by Mark Ma
  */
-public class RegistrationPage extends Page {
+public class RegistrationBasePage extends BasePage {
 
     @FindBy(name = "TermsAndCondition1")
     private WebElement termsAndConditionRadioButton;
@@ -22,28 +22,28 @@ public class RegistrationPage extends Page {
     @FindBy(id = "doNotCancelBtn")
     private WebElement yesButtonOnDialog;
 
-    public RegistrationPage(WebDriver driver) {
+    public RegistrationBasePage(WebDriver driver) {
         super(driver);
     }
 
-    public RegistrationPage acceptTermAndCondition(){
+    public RegistrationBasePage acceptTermAndCondition() {
         scrollToSpecifiedElement(termsAndConditionRadioButton, true);
         toClick(termsAndConditionRadioButton);
         return this;
     }
 
-    public RegistrationPage clickContinueButton(){
+    public RegistrationBasePage clickContinueButton() {
         toClick(continueButton);
         return this;
     }
 
-    public RegistrationPage clickCancelButton(){
+    public RegistrationBasePage clickCancelButton() {
         toClick(cancelButton);
         return this;
     }
 
-    public HomePage clickYesButton(){
+    public HomeBasePage clickYesButton() {
         clickElementByJS(yesButtonOnDialog);
-        return new HomePage(driver);
+        return new HomeBasePage(driver);
     }
 }

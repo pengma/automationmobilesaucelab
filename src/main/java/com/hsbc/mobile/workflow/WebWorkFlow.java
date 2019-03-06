@@ -1,7 +1,7 @@
 package com.hsbc.mobile.workflow;
 
-import com.hsbc.mobile.pages.HomePage;
-import com.hsbc.mobile.pages.RegistrationPage;
+import com.hsbc.mobile.pages.HomeBasePage;
+import com.hsbc.mobile.pages.RegistrationBasePage;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -10,13 +10,13 @@ import org.openqa.selenium.WebDriver;
 public class WebWorkFlow {
 
     private WebDriver driver;
-    private HomePage homePage;
-    private RegistrationPage registrationPage;
+    private HomeBasePage homePage;
+    private RegistrationBasePage registrationPage;
 
     public WebWorkFlow(WebDriver driver){
         this.driver = driver;
-        this.homePage = new HomePage(driver);
-        this.registrationPage = new RegistrationPage(driver);
+        this.homePage = new HomeBasePage(driver);
+        this.registrationPage = new RegistrationBasePage(driver);
     }
 
     public void cancelRegister(){
