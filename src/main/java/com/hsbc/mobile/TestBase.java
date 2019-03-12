@@ -18,7 +18,7 @@ import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
-import static com.hsbc.mobile.data.TestConstants.BASE_URL;
+import static com.hsbc.mobile.data.TestConstants.HSBC_BASE_URL;
 
 /**
  * Created by Mark Ma
@@ -31,6 +31,7 @@ public class TestBase implements SauceOnDemandSessionIdProvider, SauceOnDemandAu
     private final SauceOnDemandAuthentication authentication =
             new SauceOnDemandAuthentication(TestConstants.SAUCE_USERNAME, TestConstants.SAUCE_ACCESS_KEY);
     private boolean local = false;
+    private int default_timeout = 20;
 
     @BeforeMethod(alwaysRun = true)
     public void setupTest(Method method) throws MalformedURLException {
@@ -53,8 +54,8 @@ public class TestBase implements SauceOnDemandSessionIdProvider, SauceOnDemandAu
             String id = ((RemoteWebDriver)driver.get()).getSessionId().toString();
             sessionId.set(id);
         }
-        driver.get().get(BASE_URL);
-        driver.get().manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.get().get(HSBC_BASE_URL);
+        driver.get().manage().timeouts().implicitlyWait(default_timeout, TimeUnit.SECONDS);
     }
 
     @Override

@@ -4,7 +4,7 @@
 
     <test name="HSBC Logon">
         <classes>
-            <class name="com.hsbc.mobile.test.WebTestOnSauce"/>
+            <class name="com.hsbc.mobile.test.HSBCTestOnSauce"/>
         </classes>
     </test>
 

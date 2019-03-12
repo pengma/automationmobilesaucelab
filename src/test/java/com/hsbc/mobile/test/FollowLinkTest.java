@@ -18,7 +18,7 @@ public class FollowLinkTest extends TestDataAndDriverProvider {
      *
      * @throws InvalidElementStateException
      */
-    @Test(dataProvider = "hardCodedBrowsers")
+    @Test(dataProvider = "platformAndBrowsers")
     public void verifyLinkTest(String browser, String version, String os, Method method)
             throws MalformedURLException, InvalidElementStateException, UnexpectedException {
 
