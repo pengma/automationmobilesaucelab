@@ -8,9 +8,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.DataProvider;
 
-import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.rmi.UnexpectedException;
@@ -26,18 +24,6 @@ public class TestDataAndDriverProvider {
     private ThreadLocal<WebDriver> webDriver = new ThreadLocal<WebDriver>();
 
     private ThreadLocal<String> sessionId = new ThreadLocal<String>();
-
-    @DataProvider(name = "platformAndBrowsers", parallel = true)
-    public static Object[][] sauceBrowserDataProvider(Method testMethod) {
-        return new Object[][]{
-                new Object[]{"MicrosoftEdge", "17.17134", "Windows 10"},
-                new Object[]{"firefox", "latest", "Windows 10"},
-                new Object[]{"internet explorer", "11", "Windows 8.1"},
-                new Object[]{"safari", "12.0", "macOS 10.14"},
-                new Object[]{"chrome", "72", "macOS 10.13"},
-                new Object[]{"firefox", "latest-1", "Windows 7"},
-        };
-    }
 
     protected WebDriver getWebDriver() {
         return webDriver.get();

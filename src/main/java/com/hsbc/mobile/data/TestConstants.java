@@ -15,9 +15,9 @@ public interface TestConstants {
     String BUILD_TAG = new Timestamp(System.currentTimeMillis()).toString();
     int DEFAULT_WAIT_TIMEOUT = 20;
 
-    String PLATFORM = "Windows 10";
+    //    String PLATFORM = "Windows 10";
 //    String PLATFORM = "macOS 10.14";
-//    String PLATFORM = "Android";
+    String PLATFORM = "Android";
 //    String PLATFORM = "iOS";
 String BROWSER_NAME = "Chrome";
 //    String BROWSER_NAME = "Safari";

@@ -5,6 +5,7 @@ import com.hsbc.mobile.pages.SauceGithubPage;
 import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.lang.reflect.Method;
@@ -29,6 +30,18 @@ public class FollowLinkTest extends TestDataAndDriverProvider {
 
         this.annotate("Asserting that we are on a new page...");
         Assert.assertFalse(page.isOnPage());
+    }
+
+    @DataProvider(name = "platformAndBrowsers", parallel = true)
+    public static Object[][] sauceBrowserDataProvider(Method testMethod) {
+        return new Object[][]{
+                new Object[]{"MicrosoftEdge", "17.17134", "Windows 10"},
+                new Object[]{"firefox", "latest", "Windows 10"},
+                new Object[]{"internet explorer", "11", "Windows 8.1"},
+                new Object[]{"safari", "12.0", "macOS 10.14"},
+                new Object[]{"chrome", "72", "macOS 10.13"},
+                new Object[]{"firefox", "latest-1", "Windows 7"},
+        };
     }
 
 }
