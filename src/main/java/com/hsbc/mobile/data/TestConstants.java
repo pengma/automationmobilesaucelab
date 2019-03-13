@@ -13,6 +13,7 @@ public interface TestConstants {
     String SAUCE_ACCESS_KEY = System.getenv("SAUCE_ACCESS_KEY");
     String SAUCE_TEST_URL = "https://" + SAUCE_USERNAME + ":" + SAUCE_ACCESS_KEY + SAUCE_DOMAIN + "/wd/hub";
     String BUILD_TAG = new Timestamp(System.currentTimeMillis()).toString();
+    int DEFAULT_WAIT_TIMEOUT = 20;
 
     String PLATFORM = "Windows 10";
 //    String PLATFORM = "macOS 10.14";

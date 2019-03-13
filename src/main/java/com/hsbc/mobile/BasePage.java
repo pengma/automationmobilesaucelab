@@ -1,5 +1,6 @@
 package com.hsbc.mobile;
 
+import com.hsbc.mobile.data.TestConstants;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
@@ -16,7 +17,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public abstract class BasePage {
 
     private Logger logger = LogManager.getLogger(this.getClass());
-    private final static int DEFAULT_WAIT_TIMEOUT = 20;
     protected WebDriver driver;
 
     public BasePage(WebDriver driver) {
@@ -66,7 +66,7 @@ public abstract class BasePage {
     }
 
     private BasePage driverWait(WebElement webElement) {
-        return driverWait(webElement, DEFAULT_WAIT_TIMEOUT);
+        return driverWait(webElement, TestConstants.DEFAULT_WAIT_TIMEOUT);
     }
 
     private BasePage driverWait(WebElement webElement, int secs) {

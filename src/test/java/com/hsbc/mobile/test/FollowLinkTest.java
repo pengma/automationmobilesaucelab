@@ -13,11 +13,6 @@ import java.rmi.UnexpectedException;
 
 public class FollowLinkTest extends TestDataAndDriverProvider {
 
-    /**
-     * Runs a simple test verifying link can be followed.
-     *
-     * @throws InvalidElementStateException
-     */
     @Test(dataProvider = "platformAndBrowsers")
     public void verifyLinkTest(String browser, String version, String os, Method method)
             throws MalformedURLException, InvalidElementStateException, UnexpectedException {
